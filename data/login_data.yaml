@@ -18,12 +18,12 @@ login003:
   is_success: True
 login009:
   name: '17611175311'
-  pwd:
+  pwd: ""
   expect: 'false'
   is_success: False
 
 login0012:
-  name:
+  name: ""
   pwd: 123456
   expect: 'false'
   is_success: False
