@@ -35,3 +35,4 @@ class TestLogin(object):
         nick_name = self.page_factory.login_page.get_nick_name()
         print('昵称是', nick_name)
         # 断言判断结果
+        assert '用户_243' in nick_name
