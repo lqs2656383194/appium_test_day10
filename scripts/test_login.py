@@ -12,13 +12,13 @@ from tools.read_ymal import bulid_login_data
 class TestLogin(object):
     """登录测试方法"""
 
-    def setup_class(self):
+    def setup(self):
         # 驱动对象的获取
         self.driver = init_driver()
         self.page_factory = PageFactory(self.driver)
         self.base_page = BasePage(self.driver)
 
-    def teardown_class(self):
+    def teardown(self):
         """退出驱动对象"""
         self.driver.quit()
 
