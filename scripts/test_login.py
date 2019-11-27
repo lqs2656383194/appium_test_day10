@@ -6,6 +6,7 @@ import pytest
 from base.base_page import BasePage
 from common.utils import init_driver
 from page.page_factroy import PageFactory
+from tools.read_ymal import bulid_login_data
 
 
 class TestLogin(object):
@@ -21,8 +22,7 @@ class TestLogin(object):
         """退出驱动对象"""
         self.driver.quit()
 
-    @pytest.mark.parametrize("name,pwd,expect,is_success",
-                             [(17611175311, 'shuang0619', '用户_243', True), ('', '123456', 'false', False)])
+    @pytest.mark.parametrize("name,pwd,expect,is_success",bulid_login_data())
     def test_login(self, name, pwd, expect, is_success):
         """登录测试方法"""
         if is_success:  # 正向
