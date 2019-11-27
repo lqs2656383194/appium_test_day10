@@ -1,3 +1,6 @@
+"""
+驱动对象获取方法
+"""
 from appium import webdriver
 
 
@@ -16,8 +19,8 @@ def init_driver():
         # "noReset":True  不重置应用状态
     }
 
-    # 待测应用：通讯录的包名和启动名
-    # com.android.contacts/.activities.PeopleActivity
+    # 学车不(旧版) 包名/启动名
+    # com.bjcsxq.chat.carfriend/.MainActivity
 
     driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_capabilities=capabilities)
     return driver
