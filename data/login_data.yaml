@@ -1,0 +1,29 @@
+
+login001:
+  name: '17611175311'
+  pwd: shuang0619
+  expect: 用户_243
+  is_success: True
+
+login002:
+  name: ' 17611175311'
+  pwd: shuang0619
+  expect: 用户_243
+  is_success: True
+
+login003:
+  name: '17611175311'
+  pwd: shuang0619
+  expect: 用户_243
+  is_success: True
+login009:
+  name: '17611175311'
+  pwd:
+  expect: 'false'
+  is_success: False
+
+login0012:
+  name:
+  pwd: 123456
+  expect: 'false'
+  is_success: False
