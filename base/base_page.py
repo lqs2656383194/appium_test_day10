@@ -11,7 +11,7 @@ class BasePage(object):
     def find_element_func(self, location, timeout=10, poll=1):
         """元素定位方法"""
 
-        element = WebDriverWait(self.driver, timeout, poll).until(lambda x: x.find_element(location[0], location[1]))
+        element = WebDriverWait(self.driver, timeout, poll).until(lambda x: x.find_element(*location))
         return element
 
     def click_func(self, location):
@@ -27,3 +27,16 @@ class BasePage(object):
     def get_text_func(self, location):
         """获取特定文本信息"""
         return self.find_element_func(location).text
+
+    def get_toast_message(self, location):
+        """获取toast信息"""
+        element = self.find_element_func(location)
+        # xpath = '//*[contains(@text,"{}")]'.format(text)
+        # element = WebDriverWait(self.driver, timeout, poll).until(lambda x: x.find_element(By.XPATH, xpath))
+        # print('获取得toast信息为：', element.text)
+        return element.text
+
+    def get_attribute_func(self, location, attr_name):
+        """获取元素属性方法"""
+        element = self.find_element_func(location)
+        return element.get_attribute(attr_name)
